@@ -2,7 +2,11 @@ FROM node:9-stretch
 
 RUN curl -fsSL get.docker.com | sh
 
-RUN apt-get update && apt-get install -y chromium chromium-driver jq zip
+RUN apt-get update && apt-get install -y \
+    chromium \
+    chromium-driver \
+     jq \
+     zip
 
 COPY stages stages
 
